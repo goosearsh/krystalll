@@ -6,6 +6,13 @@ $color1: #00728f;
 
 $color2: #ffcc34;
 
+%typicalFlex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+//@extend %typicalFlex;
+
 body {
 	font-family: "Roboto", sans-serif;
 }
@@ -36,14 +43,10 @@ body {
 
 	&__top-body {
 		height: 50px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@extend %typicalFlex;
 	}
 	&__top-list {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@extend %typicalFlex;
 	}
 	&__top-item {
 		&:not(:last-child) {
@@ -71,14 +74,10 @@ body {
 
 	&__bottom-body {
 		padding: 15px 0;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@extend %typicalFlex;
 	}
 	&__bottom-body-box {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@extend %typicalFlex;
 		line-height: 21px;
 	}
 	&__bottom-logo {
@@ -167,7 +166,7 @@ body {
 	}
 
 	&__input {
-		display: block;
+		display: inline-block;
 		padding: 15px 0 15px 10px;
 		width: 100%;
 		border-radius: 8px;
@@ -194,9 +193,7 @@ body {
 	}
 
 	&__item {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@extend %typicalFlex;
 		max-width: 260px;
 	}
 
@@ -250,9 +247,7 @@ body {
 	}
 
 	&__box {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@extend %typicalFlex;
 		margin-bottom: 100px;
 	}
 
@@ -266,9 +261,7 @@ body {
 		border-radius: 13px;
 		height: 200px;
 		width: 200px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@extend %typicalFlex;
 		text-align: center;
 		&:not(:last-child) {
 			margin-right: 50px;
@@ -277,7 +270,6 @@ body {
 			font-weight: 900;
 			font-size: 64px;
 			line-height: 75px;
-
 			color: #2f3131;
 		}
 	}
@@ -386,14 +378,11 @@ body {
 		margin: 100px 0;
 	}
 }
-.container {
-}
-.title {
-}
 .client-slider {
 	padding: 0px 0 0px 0;
 	&__wrapper {
 		text-align: center;
+		margin: 50px 0;
 		align-items: center;
 	}
 
@@ -482,31 +471,6 @@ body {
 	}
 }
 
-.client-slider {
-	&__wrapper {
-	}
-
-	&__image {
-		img {
-			max-width: 100%;
-			max-height: 500px;
-		}
-	}
-}
-
-.client {
-	&__title {
-		text-align: center;
-	}
-}
-.title {
-}
-
-.client-slide {
-	&__slide {
-	}
-}
-
 .works-swiper {
 	&__title {
 		text-align: center;
@@ -544,6 +508,54 @@ body {
 }
 .works-pagination {
 }
+
+.footer {
+	background-color: #00485A;
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-template-rows: 1fr;
+		padding: 50px 0;
+	}
+
+	&__list {
+		line-height: 25px;
+	}
+
+	&__link {
+		a{
+			font-weight: 700;
+		font-size: 14px;
+	
+		color: rgba(255, 255, 255, 0.8);
+		}
+	}
+	&__link--title {
+		margin-bottom: 20px;
+		a{
+			font-weight: 900;
+			font-size: 24px;
+			line-height: 28px;
+			color: #FFFFFF;
+		}
+	}
+
+	&__link--logo {
+		margin-bottom: 10px;
+		img{
+			width: 250px;
+		}
+
+	}
+}
+.container {
+}
+
+
+
+
+
+
 
 @media (max-width: 1581px) {
 	.lists__body {

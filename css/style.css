@@ -88,6 +88,18 @@ h6 {
 }
 
 /*----------------------*/
+.header__top-body, .header__top-list, .header__bottom-body, .header__bottom-body-box, .quality__item, .facts__box, .facts__numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -124,27 +136,6 @@ body {
 
 .header__top-body {
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header__top-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header__top-item:not(:last-child) {
@@ -177,27 +168,9 @@ body {
 
 .header__bottom-body {
   padding: 15px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header__bottom-body-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   line-height: 21px;
 }
 
@@ -296,7 +269,7 @@ body {
 }
 
 .form__input {
-  display: block;
+  display: inline-block;
   padding: 15px 0 15px 10px;
   width: 100%;
   border-radius: 8px;
@@ -328,15 +301,6 @@ body {
 }
 
 .quality__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 260px;
 }
 
@@ -397,15 +361,6 @@ body {
 }
 
 .facts__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: 100px;
 }
 
@@ -420,15 +375,6 @@ body {
   border-radius: 13px;
   height: 200px;
   width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
 }
 
@@ -570,6 +516,7 @@ body {
 
 .client-slider__wrapper {
   text-align: center;
+  margin: 50px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -642,15 +589,6 @@ body {
   max-width: 500px;
 }
 
-.client-slider__image img {
-  max-width: 100%;
-  max-height: 500px;
-}
-
-.client__title {
-  text-align: center;
-}
-
 .works-swiper__title {
   text-align: center;
   margin-top: 30px;
@@ -673,6 +611,49 @@ body {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.footer {
+  background-color: #00485A;
+}
+
+.footer__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding: 50px 0;
+}
+
+.footer__list {
+  line-height: 25px;
+}
+
+.footer__link a {
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__link--title {
+  margin-bottom: 20px;
+}
+
+.footer__link--title a {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+.footer__link--logo {
+  margin-bottom: 10px;
+}
+
+.footer__link--logo img {
+  width: 250px;
 }
 
 @media (max-width: 1581px) {

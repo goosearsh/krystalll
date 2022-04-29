@@ -29,6 +29,7 @@ new Swiper('.client-slider', {
 	autoHeight: false,
 	slidesPerView: 4,
 	spaceBetween: 50,
+	speed: 1000,
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -63,6 +64,7 @@ new Swiper('.works-slider', {
 	autoHeight: false,
 	slidesPerView: 3,
 	spaceBetween: 30,
+	speed: 1000,
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
